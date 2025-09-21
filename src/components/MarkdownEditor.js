@@ -13,7 +13,7 @@ function MarkdownEditor() {
         placeholder="Write your Markdown here..."
       />
       <div className="preview">
-        <ReactMarkdown>{markdown}</ReactMarkdown>
+        <ReactMarkdown source={markdown} />
       </div>
     </div>
   );
