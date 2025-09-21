@@ -12,9 +12,7 @@ function MarkdownEditor() {
         onChange={(e) => setMarkdown(e.target.value)}
         placeholder="Write your Markdown here..."
       />
-      <div className="preview">
-        <ReactMarkdown source={markdown} />
-      </div>
+     <ReactMarkdown source={markdown} />
     </div>
   );
 }
