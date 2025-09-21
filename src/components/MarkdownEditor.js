@@ -17,9 +17,11 @@ function MarkdownEditor() {
         placeholder="Write your Markdown here..."
       />
       <div className="preview">
-        <ReactMarkdown>{preview}</ReactMarkdown>
+        {/* ReactMarkdown converts # Heading → <h1>Heading</h1> */}
+        <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>
     </div>
+    
   );
 }
 
