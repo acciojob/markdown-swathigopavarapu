@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 function MarkdownEditor() {
+  // Initialize exactly what Cypress expects
   const [markdown, setMarkdown] = useState("# Heading");
-  const [preview, setPreview] = useState("");
-  useEffect(() => {
-    setPreview(markdown);
-  }, [markdown]);
 
   return (
     <div className="editor-container">
@@ -17,11 +14,9 @@ function MarkdownEditor() {
         placeholder="Write your Markdown here..."
       />
       <div className="preview">
-        {/* ReactMarkdown converts # Heading → <h1>Heading</h1> */}
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>
     </div>
-    
   );
 }
 
