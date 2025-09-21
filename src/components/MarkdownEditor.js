@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 
 function MarkdownEditor() {
-  const [markdown, setMarkdown] = useState("# Heading\n");
+  const [markdown, setMarkdown] = useState("# Heading");
   const [preview, setPreview] = useState("");
   useEffect(() => {
     setPreview(markdown);
