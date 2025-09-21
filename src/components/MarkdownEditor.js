@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 function MarkdownEditor() {
-  // Initialize exactly what Cypress expects
   const [markdown, setMarkdown] = useState("# Heading");
 
   return (
