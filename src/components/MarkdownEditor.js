@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 function MarkdownEditor() {
-  const [markdown, setMarkdown] = useState("Heading"); 
+  const [markdown, setMarkdown] = useState("# Heading"); // add # for h1
 
   return (
     <div className="editor-container">
@@ -12,7 +12,9 @@ function MarkdownEditor() {
         onChange={(e) => setMarkdown(e.target.value)}
         placeholder="Write your Markdown here..."
       />
-     <ReactMarkdown source={markdown} />
+      <div className="preview">
+        <ReactMarkdown source={markdown} />
+      </div>
     </div>
   );
 }
